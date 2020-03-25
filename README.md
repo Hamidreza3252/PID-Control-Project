@@ -28,6 +28,6 @@ These methods are:
 
 ## 4. Code Style
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html). 
+I used [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) for this project. 
 
 
