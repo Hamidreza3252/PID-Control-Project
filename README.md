@@ -6,16 +6,19 @@ The objective of this project is to develop and fine-tune the parameters of two 
 
 ## 2. Approach 
 
-### Input Data and Main Functions 
 The simulator provides cte (error with respeect to the center of the lane), speed, and steering angle of the ego car. The PID controller class has two functions to estimate the steering angle and the throtle to get up to speed of 30 mph. 
 
 These methods are: 
 - `TotalSteerError` calculates total PID error of steering 
 - `TotalThrotleError` calculates total PID error of throtle. This method works with the velocity error which is the differene between the velocity of the ego vehicle and the set point of 30 mph. 
 
-### Hyper Parameters 
-I followed a straightforward instruction to fine-tune the PID hyper parameters to calculate the steering angle and throtle value. I first set `kd` and `ki` to zero and then manually played with `kp`, the proportional factor. After finding the close range, then I manually played with `kd` and `ki` step by step to find the best combination of these parameters. 
+### Tuned Parameters 
 
+- Steering: `kp_steer_ = 0.15`, `ki_steer_ = 0.001`, `ki_steer_ = 3.4` 
+- Throtle: `kp_throtle_ = 0.15`, `kp_throtle_ = 3e-5`, `kp_throtle_ = 6.0` 
+
+### Sample Video of the Result 
+[![PID Control Sample Video](https://img.youtube.com/vi/pt45_kg-5fQ/0.jpg)](https://www.youtube.com/watch?v=pt45_kg-5fQ)
 
 ## 3. Dependencies
 
@@ -33,6 +36,6 @@ I followed a straightforward instruction to fine-tune the PID hyper parameters t
 
 ## 4. Code Style
 
-I used [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) for this project. 
+Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html). 
 
 
